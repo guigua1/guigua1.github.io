@@ -22,7 +22,7 @@
     <meta name="description" content="That why I have to learn computer vision">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Haiyi Yang UESTC</title>
+    <title>视觉消失点方法 · Haiyi Yang UESTC</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 <meta name="generator" content="Hexo 4.1.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >The pyr8 travels around the world</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">视觉消失点方法</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>The pyr8 travels around the world</a>
 </header>
@@ -220,24 +231,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            视觉消失点方法
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">836</span>Reading time: <span class="post-count reading-time">3 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/10/04</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,146 +393,71 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/10/%5BArticle%20Review%5D%202014%20-%20Multiple%20Lane%20Boundary%20Detection%20Using%20A%20Combination%20of%20Low-Level%20Image%20Features/" >
-            
-                <span>Multiple Lane Boundary Detection Using A Combination of Low-Level Image Features</span>
-        </a>
-        <div class="abstract-content">
-            framework
-Fusion of edge features and high intensity feature
-Application of Kalman ﬁlter for information fusion and tracking
-Test on roads with different driving scenarios, including day, night, heavy trafﬁc, rain, confusing textures and shadows
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>车道检测的应用环境多为开阔的室外场地，无论是在结构化环境（铺装道路）或非结构化环境（非铺装道路，off-road）中，此时的道路远端往往也位于图像的视觉消失点，因而可以将消失点作为车道检测的强有力证据。与此同时，想要得到精确地估计视觉消失点本身也具有一定难点。例如以边缘进行估计时，与消失点无关的物体边缘或环境（如光线强弱、噪声等）对边缘细节的破坏，可能给估计过程带来干扰，因此需要设计或选择具有一定辨别力及不变性的边缘特征表示方法。除此之外，各个特征对视觉消失点的贡献对于其估计的精度和效率都具有重要影响。一些文献针对这些问题展开了相关研究，下文基于几种经典的视觉消失点检测方法<sup><a href="#fn_1" id="reffn_1">1</a></sup><sup><a href="#fn_2" id="reffn_2">2</a></sup><sup><a href="#fn_3" id="reffn_3">3</a></sup><sup><a href="#fn_4" id="reffn_4">4</a></sup>进行介绍。</p>
+<h2 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h2><p>在基本的成像模型下，3-D世界中的平行线，如道路、建筑物边界等，透视投影在2-D图像平面中的线条将汇聚到特定位置，这些位置即称为视觉消失点。常见图像中可以观察出一个至三个消失点，而具体从车辆的前视摄像头来看，直线道路的消失点往往汇聚于视线前方，且与地平线相交。需要注意的是，曲线道路的消失点往往存在偏移。通过Moghandam P. 等人的论文<sup><a href="#fn_4" id="reffn_4">4</a></sup>所示图片可以直观地理解视觉消失点<code>vp (Vanishing-Point)</code>的位置。</p>
+<p><img src="/images/vanishing-point.png" alt="消失点定义"></p>
+<p>结合上图，大多数方法将消失点表示为2-D图像中部分直线的交点，于是相应的检测过程可大致分为三个步骤：</p>
+<ol>
+<li>检测图像中的显著边界，如道路或车道线等</li>
+<li>判断其中的有效边界，如直线且长度或方向符合所需条件的边界</li>
+<li>通过有效边界的延展，并计算相交点或对相应位置进行投票，估计可能的视觉消失点。</li>
+</ol>
+<p>其中涉及到的一些算法诸如Canny边缘检测、Hough直线检测、RANSAC对于大多数场景具有一定的适应性，但也存在显而易见的缺陷。通常来说，在非结构化的道路条件下往往不具有明显的边界特征，同时也难以构成连续的直线。因此，为了提高其他应用场景下的道路和消失点检测效果，不依赖边缘检测的方法得到了广泛研究。</p>
+<p>(to be continue…)</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote id="fn_1">
+<sup>1</sup>. <a href="http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=1315069" target="_blank" rel="noopener">Rasmussen C . Grouping Dominant Orientations for Ill-Structured Road Following.[C]// IEEE Computer Society Conference on Computer Vision &amp; Pattern Recognition. IEEE, 2004.</a><a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. <a href="https://ieeexplore.ieee.org/document/5206787" target="_blank" rel="noopener">Kong H,  Audibert J Y,  Ponce J. Vanishing point detection for road detection[C]// 2009 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR 2009), 20-25 June 2009, Miami, Florida,  USA. IEEE, 2009.</a> <a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<p><sup><a href="#fn_3" id="reffn_3">3</a></sup>:<a href="https://ieeexplore.ieee.org/document/5443611/" target="_blank" rel="noopener">Kong H,  Audibert J Y,  Ponce J. General Road Detection From a Single Image[J]. IEEE Transactions on Image Processing, 2010, 19(8):2211-2220.</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup>: <a href="https://ieeexplore.ieee.org/document/5957282" target="_blank" rel="noopener">Moghadam P,  Starzyk J A,  Wijesoma W S. Fast Vanishing-Point Detection in Unstructured Environments[J]. IEEE Transactions on Image Processing, 2012, 21(1):425-430.</a><br><sup><a href="#fn_ 5" id="reffn_ 5"> 5</a></sup>: An Efficient Lane Markings Detection and Tracking Method based on Vanishing Point Constraints</p>
 
-intro
-  Detection multiple lanes and achieving rel...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/10</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/06/%5BArticle%20Review%5D%202016%20-%20Real-Time%20Lane-Vehicle%20Detection%20and%20Tracking%20System/" >
-            
-                <span>Real-Time Lane-Vehicle Detection and Tracking System</span>
-        </a>
-        <div class="abstract-content">
-            framework
-lane detection and tracking
-
-sky and road region recognition
-
-vehicle detection and tracking
-
-introThis paper is inspired by the advantages of object detector based on CNN, such as Faster-RCNN, YOLO, and so on. Therefore, car detection is the core step in the framework, whereas the lane...
+        <div class="license-wrapper">
+            <p>Author：<a href="http://yoursite.com">Henry Yang</a>
+            <p>原文链接：<a href="http://yoursite.com/2019/10/04/[Article%20Review]%202019%20-%20%E8%A7%86%E8%A7%89%E6%B6%88%E5%A4%B1%E7%82%B9%E6%96%B9%E6%B3%95/">http://yoursite.com/2019/10/04/[Article%20Review]%202019%20-%20%E8%A7%86%E8%A7%89%E6%B6%88%E5%A4%B1%E7%82%B9%E6%96%B9%E6%B3%95/</a>
+            <p>发表日期：<a href="http://yoursite.com/2019/10/04/[Article%20Review]%202019%20-%20%E8%A7%86%E8%A7%89%E6%B6%88%E5%A4%B1%E7%82%B9%E6%96%B9%E6%B3%95/">October 4th 2019, 12:00:00 am</a>
+            <p>更新日期：<a href="http://yoursite.com/2019/10/04/[Article%20Review]%202019%20-%20%E8%A7%86%E8%A7%89%E6%B6%88%E5%A4%B1%E7%82%B9%E6%96%B9%E6%B3%95/">December 10th 2019, 7:40:19 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/06</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/04/%5BArticle%20Review%5D%202019%20-%20%E8%A7%86%E8%A7%89%E6%B6%88%E5%A4%B1%E7%82%B9%E6%96%B9%E6%B3%95/" >
-            
-                <span>视觉消失点方法</span>
-        </a>
-        <div class="abstract-content">
-            摘要车道检测的应用环境多为开阔的室外场地，无论是在结构化环境（铺装道路）或非结构化环境（非铺装道路，off-road）中，此时的道路远端往往也位于图像的视觉消失点，因而可以将消失点作为车道检测的强有力证据。与此同时，想要得到精确地估计视觉消失点本身也具有一定难点。例如以边缘进行估计时，与消失点无关的物体边缘或环境（如光线强弱、噪声等）对边缘细节的破坏，可能给估计过程带来干扰，因此需要设计或选择具有一定辨别力及不变性的边缘特征表示方法。除此之外，各个特征对视觉消失点的贡献对于其估计的精度和效率都具有重要影响。一些文献针对这些问题展开了相关研究，下文基于几种经典的视觉消失点检测方法1234进...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/04</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/03/%5BArticle%20Review%5D%202008%20-Evaluation%20of%20Road%20Marking%20Feature%20Extraction/" >
-            
-                <span>Evaluation of Road Marking Feature Extraction</span>
-        </a>
-        <div class="abstract-content">
-            framework1graph LR2subgraph Evaluation31[extracting marking features]4end51 --&gt; 2[estimating geometrical model]62 --&gt; 3[tracking parameters]
-Feature extraction Methods: thresholding / gradient analysis / convolution
-1. Intro Six representative road feature extractors and two variants based ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/03</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/02/%5BArticle%20Review%5D%202017%20-%20Lane%20detection%20and%20lane%20departure%20warning%20review/" >
-            
-                <span>lane detection and lane departure warning review</span>
-        </a>
-        <div class="abstract-content">
-            1.8. Lane Detection车道检测是上述步骤的综合应用，如将边界等特征提取与道路模型相结合。因此，基于不同的侧重点，存在两类方法，即基于特征和基于模型的方法。
-首先，特征方法通过提取道路图像的低级特征来定位车道。除通用的边界检测算子（如Sobel / Canny）外，部分文章提出了针对车道线的专业边界检测方法：
-
-
-
-另外一些方法对边界进一步具象，如[52]应用Hough变换提取车道轮廓的线段，并使用DBSCAN方法进行聚类分析。[53]使用最大稳定极值区域（MSER）与PPHough变换提取车道标记。[54][55]则结合车辆检测决定检测车道的区域。
-[28,29,63] ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/02</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2019/10/06/%5BArticle%20Review%5D%202016%20-%20Real-Time%20Lane-Vehicle%20Detection%20and%20Tracking%20System/" title= "Real-Time Lane-Vehicle Detection and Tracking System">
+                    <div class="nextTitle">Real-Time Lane-Vehicle Detection and Tracking System</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/10/03/%5BArticle%20Review%5D%202008%20-Evaluation%20of%20Road%20Marking%20Feature%20Extraction/" title= "Evaluation of Road Marking Feature Extraction">
+                    <div class="prevTitle">Evaluation of Road Marking Feature Extraction</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -555,6 +535,24 @@ Feature extraction Methods: thresholding / gradient analysis / convolution
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-问题描述"><span class="toc-number">2.</span> <span class="toc-text">1. 问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文献"><span class="toc-number">3.</span> <span class="toc-text">参考文献</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -724,6 +722,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
