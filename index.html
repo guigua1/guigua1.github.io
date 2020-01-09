@@ -357,25 +357,35 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/lane-detect/Multiple%20Lane%20Boundary%20Detection%20Using%20A%20Combination%20of%20Low-Level%20Image%20Features/" >
+        <a class="abstract-title" href = "/2019/12/LIDAR-PointCloud-Seg/" >
             
-                <span>Multiple Lane Boundary Detection Using A Combination of Low-Level Image Features</span>
+                <span>[Review] on the Segmentation of 3D LIDAR Point Clouds</span>
         </a>
         <div class="abstract-content">
-            framework
-Fusion of edge features and high intensity feature
-Application of Kalman ﬁlter for information fusion and tracking
-Test on roads with different driving scenarios, including day, night, heavy trafﬁc, rain, confusing textures and shadows
+            Abstract:
+3D数据类型（dense or sparse）
+地面模型（grid based, Gaussian Process based, or mesh based）
+3D聚类方法
 
-intro
-  Detection multiple lanes and achieving rel...
+对于不同类型的3D点云数据，适用的分割方法可能不同，于是该文评估了对每种数据类型具有更好分割性能的算法。
+首先，作者对密集（dense）和稀疏（sparse）3D数据进行了区分。在固定的离散分辨率下，密集数据通常包含了可以联通的表面区域，而稀疏数据中空的格点增加，导致物体容易被过分割。相应地，密集数据的分割一般采用固定分辨率的网格模型，稀疏数据的分割则采用基于非固定粒度的地面表示和多种插值方法连...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/10</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/23</span>
             </div>
             <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Point Cloud">Point Cloud</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Segmentation">Segmentation</a>
+    
+</div>
             
         </div>
     </article>
@@ -386,19 +396,94 @@ intro
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/lane-detect/Real-Time%20Lane-Vehicle%20Detection%20and%20Tracking%20System/" >
+        <a class="abstract-title" href = "/2019/12/Point-Cloud-Convolution/" >
             
-                <span>Real-Time Lane-Vehicle Detection and Tracking System</span>
+                <span>[Review] Convolution for Point Cloud</span>
+        </a>
+        <div class="abstract-content">
+            reference:
+1. 3D Object Classification with Point Convolution Network &#8617;
+
+
+2.  &#8617;
+
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/18</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Point Cloud">Point Cloud</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CNN">CNN</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/12/Point-Clouds-Segmentation/" >
+            
+                <span>[Review] Real-Time and Accurate Segmentation of 3-D Point Clouds Based on Gaussian Process Regression</span>
+        </a>
+        <div class="abstract-content">
+            对于3D激光点云在自动驾驶的应用场景，为了对物体进行准确地感知，如分类或跟踪等，许多之前的方法在分割物体时，往往会尝试先删除地面点云。但是，这一步骤通常会产生可观的计算代价，甚至影响准确性。于是，为了达到实时性，标题中这篇论文提出了一种直接进行物体分割的处理方法，且实验结果表明该方法具有更好的效率与准确性。
+方法摘要：
+
+生成候选目标点，并基于集成的2D网格结构进行边界查找
+
+
+
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/16</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Point Cloud">Point Cloud</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Automated Driving">Automated Driving</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/10/Lane-Vehicle-Detection-Tracking/" >
+            
+                <span>[Review] Real-Time Lane-Vehicle Detection and Tracking System</span>
         </a>
         <div class="abstract-content">
             framework
 lane detection and tracking
-
 sky and road region recognition
-
 vehicle detection and tracking
 
-introThis paper is inspired by the advantages of object detector based on CNN, such as Faster-RCNN, YOLO, and so on. Therefore, car detection is the core step in the framework, whereas the lane...
+introThis paper is inspired by the advantages of object detector based on CNN, such as Faster-RCNN, YOLO, and so on. Therefore, car detection is the core step in the framework, whereas the lane d...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -407,6 +492,16 @@ introThis paper is inspired by the advantages of object detector based on CNN, s
             </div>
             <!-- tags  -->
             
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Tracking">Tracking</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
+    
+</div>
+            
         </div>
     </article>
     
@@ -416,9 +511,9 @@ introThis paper is inspired by the advantages of object detector based on CNN, s
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/lane-detect/vanishing%20point%20detection/" >
+        <a class="abstract-title" href = "/2019/10/Vanishing-point-detection/" >
             
-                <span>视觉消失点方法</span>
+                <span>[Review] 视觉消失点方法</span>
         </a>
         <div class="abstract-content">
             摘要车道检测的应用环境多为开阔的室外场地，无论是在结构化环境（铺装道路）或非结构化环境（非铺装道路，off-road）中，此时的道路远端往往也位于图像的视觉消失点，因而可以将消失点作为车道检测的强有力证据。与此同时，想要得到精确地估计视觉消失点本身也具有一定难点。例如以边缘进行估计时，与消失点无关的物体边缘或环境（如光线强弱、噪声等）对边缘细节的破坏，可能给估计过程带来干扰，因此需要设计或选择具有一定辨别力及不变性的边缘特征表示方法。除此之外，各个特征对视觉消失点的贡献对于其估计的精度和效率都具有重要影响。一些文献针对这些问题展开了相关研究，下文基于几种经典的视觉消失点检测方法1234进...
@@ -430,6 +525,16 @@ introThis paper is inspired by the advantages of object detector based on CNN, s
             </div>
             <!-- tags  -->
             
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Vanishing Point">Vanishing Point</a>
+    
+</div>
+            
         </div>
     </article>
     
@@ -439,9 +544,9 @@ introThis paper is inspired by the advantages of object detector based on CNN, s
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/lane-detect/Evaluation%20of%20Road%20Marking%20Feature%20Extraction/" >
+        <a class="abstract-title" href = "/2019/10/Evaluation-of-Road-Marking-Feature-Extraction/" >
             
-                <span>Evaluation of Road Marking Feature Extraction</span>
+                <span>[Review] Evaluation of Road Marking Feature Extraction</span>
         </a>
         <div class="abstract-content">
             在传统车道线检测算法中，手工设计的特征是算法的关键之一。为了评估不同特征的特点和差异，《Evaluation of Road Marking Feature Extraction》这篇文章中介绍了部分较为基础的图像特征，例如从像素强度或各种滤波响应进行阈值分割得到的像素点，并基于简单的道路标记检测方法进行了对比分析。
@@ -459,6 +564,14 @@ end
             </div>
             <!-- tags  -->
             
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
+    
+</div>
+            
         </div>
     </article>
     
@@ -468,9 +581,9 @@ end
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/lane-detect/Lane%20detection%20and%20lane%20departure%20warning%20review/" >
+        <a class="abstract-title" href = "/2019/10/Lane-detection-and-lane-departure-warning/" >
             
-                <span>lane detection and lane departure warning review</span>
+                <span>[Review] Lane Detection and Lane Departure Warning Review</span>
         </a>
         <div class="abstract-content">
             1.8. Lane Detection车道检测是上述步骤的综合应用，如将边界等特征提取与道路模型相结合。因此，基于不同的侧重点，存在两类方法，即基于特征和基于模型的方法。
@@ -487,6 +600,51 @@ end
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/02</span>
             </div>
             <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/10/multi-lane-bndry/" >
+            
+                <span>[Review] Multiple Lane Boundary Detection Using a Combination of Low-Level Image Features</span>
+        </a>
+        <div class="abstract-content">
+            framework
+Fusion of edge features and high intensity feature
+Application of Kalman ﬁlter for information fusion and tracking
+Test on roads with different driving scenarios, including day, night, heavy trafﬁc, rain, confusing textures and shadows
+
+intro
+  Detection multiple lanes and achieving rel...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
+    
+</div>
             
         </div>
     </article>
@@ -649,15 +807,15 @@ end
     
     </div>
     
-    
-      <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version  }}/dist/mermaid.min.js'></script>
-      <script>
-      if (window.mermaid) {
-        mermaid.initialize({theme: 'forest'});
-      }
-      </script>
-    
 </footer>
+
+  <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version  }}/dist/mermaid.min.js'></script>
+  <script>
+  if (window.mermaid) {
+    mermaid.initialize({theme: 'forest'});
+  }
+  </script>
+
 
     </div>
     <!-- toc -->
@@ -717,9 +875,44 @@ end
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 8
         </div>
         <!-- search  -->
         
@@ -735,33 +928,64 @@ end
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">12/10</span><a class="archive-post-title" href= "/2019/12/lane-detect/Multiple%20Lane%20Boundary%20Detection%20Using%20A%20Combination%20of%20Low-Level%20Image%20Features/" >Multiple Lane Boundary Detection Using A Combination of Low-Level Image Features</a>
+            <span class="archive-post-date">12/23</span><a class="archive-post-title" href= "/2019/12/LIDAR-PointCloud-Seg/" >[Review] on the Segmentation of 3D LIDAR Point Clouds</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2019/10/lane-detect/Real-Time%20Lane-Vehicle%20Detection%20and%20Tracking%20System/" >Real-Time Lane-Vehicle Detection and Tracking System</a>
+            <span class="archive-post-date">12/18</span><a class="archive-post-title" href= "/2019/12/Point-Cloud-Convolution/" >[Review] Convolution for Point Cloud</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/04</span><a class="archive-post-title" href= "/2019/10/lane-detect/vanishing%20point%20detection/" >视觉消失点方法</a>
+            <span class="archive-post-date">12/16</span><a class="archive-post-title" href= "/2019/12/Point-Clouds-Segmentation/" >[Review] Real-Time and Accurate Segmentation of 3-D Point Clouds Based on Gaussian Process Regression</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/03</span><a class="archive-post-title" href= "/2019/10/lane-detect/Evaluation%20of%20Road%20Marking%20Feature%20Extraction/" >Evaluation of Road Marking Feature Extraction</a>
+            <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2019/10/Lane-Vehicle-Detection-Tracking/" >[Review] Real-Time Lane-Vehicle Detection and Tracking System</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/02</span><a class="archive-post-title" href= "/2019/10/lane-detect/Lane%20detection%20and%20lane%20departure%20warning%20review/" >lane detection and lane departure warning review</a>
+            <span class="archive-post-date">10/04</span><a class="archive-post-title" href= "/2019/10/Vanishing-point-detection/" >[Review] 视觉消失点方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/03</span><a class="archive-post-title" href= "/2019/10/Evaluation-of-Road-Marking-Feature-Extraction/" >[Review] Evaluation of Road Marking Feature Extraction</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/02</span><a class="archive-post-title" href= "/2019/10/Lane-detection-and-lane-departure-warning/" >[Review] Lane Detection and Lane Departure Warning Review</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2019/10/multi-lane-bndry/" >[Review] Multiple Lane Boundary Detection Using a Combination of Low-Level Image Features</a>
         </li>
     
     </div>
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="Lane Detection"><span class="iconfont-archer">&#xe606;</span>Lane Detection</span>
+    
+        <span class="sidebar-tag-name" data-tags="Tracking"><span class="iconfont-archer">&#xe606;</span>Tracking</span>
+    
+        <span class="sidebar-tag-name" data-tags="Article Review"><span class="iconfont-archer">&#xe606;</span>Article Review</span>
+    
+        <span class="sidebar-tag-name" data-tags="Point Cloud"><span class="iconfont-archer">&#xe606;</span>Point Cloud</span>
+    
+        <span class="sidebar-tag-name" data-tags="Segmentation"><span class="iconfont-archer">&#xe606;</span>Segmentation</span>
+    
+        <span class="sidebar-tag-name" data-tags="Automated Driving"><span class="iconfont-archer">&#xe606;</span>Automated Driving</span>
+    
+        <span class="sidebar-tag-name" data-tags="Vanishing Point"><span class="iconfont-archer">&#xe606;</span>Vanishing Point</span>
+    
+        <span class="sidebar-tag-name" data-tags="CNN"><span class="iconfont-archer">&#xe606;</span>CNN</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -796,7 +1020,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Article-Review"><span class="iconfont-archer">&#xe60a;</span>Article-Review</span>
+        <span class="sidebar-category-name" data-categories="Lane-Detection"><span class="iconfont-archer">&#xe60a;</span>Lane-Detection</span>
+    
+        <span class="sidebar-category-name" data-categories="Point-Cloud"><span class="iconfont-archer">&#xe60a;</span>Point-Cloud</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

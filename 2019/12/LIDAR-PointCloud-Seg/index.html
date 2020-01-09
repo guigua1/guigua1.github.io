@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Haiyi Yang UESTC</title>
+    <title>[Review] on the Segmentation of 3D LIDAR Point Clouds · Haiyi Yang UESTC</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 <meta name="generator" content="Hexo 4.1.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Pyr8 travels CV world</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">[Review] on the Segmentation of 3D LIDAR Point Clouds</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Pyr8 travels CV world</a>
 </header>
@@ -220,24 +231,78 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            [Review] on the Segmentation of 3D LIDAR Point Clouds
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Point Cloud">Point Cloud</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Segmentation">Segmentation</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">869</span>Reading time: <span class="post-count reading-time">3 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/12/23</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,192 +403,77 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/Lane-Vehicle-Detection-Tracking/" >
-            
-                <span>[Review] Real-Time Lane-Vehicle Detection and Tracking System</span>
-        </a>
-        <div class="abstract-content">
-            framework
-lane detection and tracking
-sky and road region recognition
-vehicle detection and tracking
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h3><ol>
+<li>3D数据类型（dense or sparse）</li>
+<li>地面模型（grid based, Gaussian Process based, or mesh based）</li>
+<li>3D聚类方法</li>
+</ol>
+<p>对于不同类型的3D点云数据，适用的分割方法可能不同，于是该文评估了对每种数据类型具有更好分割性能的算法。</p>
+<p>首先，作者对密集（dense）和稀疏（sparse）3D数据进行了区分。在固定的离散分辨率下，密集数据通常包含了可以联通的表面区域，而稀疏数据中空的格点增加，导致物体容易被过分割。相应地，密集数据的分割一般采用固定分辨率的网格模型，稀疏数据的分割则采用基于非固定粒度的地面表示和多种插值方法连接数据间的空洞。</p>
+<h3 id="密集数据分割"><a href="#密集数据分割" class="headerlink" title="密集数据分割"></a>密集数据分割</h3><p>一般方法：体素网格分割（voxel grid based segmentation）</p>
+<p>体素通过三维的立方体来处理3D点及计算特征。例如，3D均值、方差和密度等，这类方法具有简单易用的特点，通过显示或数据结构都能简单地进行表示，并且可以通过调整体素的尺寸进行放缩，而确保数据密度可行。</p>
+<p>具体方法可分为四种，其中三种为两阶段方法，即首先决定地面划分，然后进行3D聚类，另外一种则直接进行后边的聚类过程。</p>
+<ol>
+<li>地面划分：基于垂直方向的均值和方差，进行阈值判断。</li>
+<li>聚类：仅通过邻域进行划分。</li>
+<li>地基方法：划分voxel是否属于平面，而当不相似的非平面voxel位于平面voxel之下时，两者可以合并，例如汽车的车身和车顶的关系。</li>
+<li>地面-地基方法：先进行1，再进行3。</li>
+</ol>
+<h3 id="稀疏数据分割"><a href="#稀疏数据分割" class="headerlink" title="稀疏数据分割"></a>稀疏数据分割</h3><p>存在两种互补的稀疏分割方法：高斯过程增量采样一致性（GP-INSAC，Gaussian Process Incremental Sample Consensus）和网格分割（Mesh based Segmentation）。</p>
+<ol>
+<li><p>GP_INSAC：迭代连续概率地面估计方法，转换为基于模型的离群值筛除形式。增量采样一致性致力于解决模型复杂度增加带来的计算性能问题。通过迭代地外插和内插，GP-INSAC可以逐渐发现模型内点，并排除干扰模型的离群点，直到没有新的内点可以被找到。</p>
+<p><img src="../images/GP-INSAC.png" alt="GP-INSAC Algorithm"></p>
+<p>完整处理算法：</p>
+<p><img src="../images/GP-INSAC-ALL.png" alt="GP-INSAC-ALL"></p>
+<p>Compress和Decimate即在固定尺寸的voxel grid中进行降采样。然后，种子点的选取基于高度和半径。</p>
+</li>
+<li><p>Mesh Based Segmentation：1）构建地形网格，2）基于梯度场提取地面点，3）聚类非地面物体</p>
+<p>Mesh不同于grid，其中相邻两点不满足固定分辨率条件。通过基于种子点的区域生长可以从拓扑结构中分割出地面。在Mesh中按方向遍历，由高度差和距离计算出梯度场。地面分割则从最近的raster line到最远的raster line进行生长聚类。另外，地物转换位置可通过地面上连续点的高度buffer进行识别，这个buffer先沿着raster line扫描，后沿着radial line扫描。当相邻节点的梯度和高度满足约束条件时，找出转换位置。进而，通过转换位置使物体分割更加紧凑。</p>
+</li>
+</ol>
+<h3 id="实验与结论"><a href="#实验与结论" class="headerlink" title="实验与结论"></a>实验与结论</h3><p>经验性地分析了不同方法的参数选择和实验效果。</p>
 
-introThis paper is inspired by the advantages of object detector based on CNN, such as Faster-RCNN, YOLO, and so on. Therefore, car detection is the core step in the framework, whereas the lane d...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Tracking">Tracking</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/Vanishing-point-detection/" >
-            
-                <span>[Review] 视觉消失点方法</span>
-        </a>
-        <div class="abstract-content">
-            摘要车道检测的应用环境多为开阔的室外场地，无论是在结构化环境（铺装道路）或非结构化环境（非铺装道路，off-road）中，此时的道路远端往往也位于图像的视觉消失点，因而可以将消失点作为车道检测的强有力证据。与此同时，想要得到精确地估计视觉消失点本身也具有一定难点。例如以边缘进行估计时，与消失点无关的物体边缘或环境（如光线强弱、噪声等）对边缘细节的破坏，可能给估计过程带来干扰，因此需要设计或选择具有一定辨别力及不变性的边缘特征表示方法。除此之外，各个特征对视觉消失点的贡献对于其估计的精度和效率都具有重要影响。一些文献针对这些问题展开了相关研究，下文基于几种经典的视觉消失点检测方法1234进...
+        <div class="license-wrapper">
+            <p>Author：<a href="http://guigua1.github.io">Henry Yang</a>
+            <p>原文链接：<a href="http://guigua1.github.io/2019/12/LIDAR-PointCloud-Seg/">http://guigua1.github.io/2019/12/LIDAR-PointCloud-Seg/</a>
+            <p>发表日期：<a href="http://guigua1.github.io/2019/12/LIDAR-PointCloud-Seg/">December 23rd 2019, 12:00:00 am</a>
+            <p>更新日期：<a href="http://guigua1.github.io/2019/12/LIDAR-PointCloud-Seg/">January 9th 2020, 7:58:41 pm</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/04</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Vanishing Point">Vanishing Point</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/Evaluation-of-Road-Marking-Feature-Extraction/" >
-            
-                <span>[Review] Evaluation of Road Marking Feature Extraction</span>
-        </a>
-        <div class="abstract-content">
-            在传统车道线检测算法中，手工设计的特征是算法的关键之一。为了评估不同特征的特点和差异，《Evaluation of Road Marking Feature Extraction》这篇文章中介绍了部分较为基础的图像特征，例如从像素强度或各种滤波响应进行阈值分割得到的像素点，并基于简单的道路标记检测方法进行了对比分析。
-frameworkgraph LR
-subgraph Evaluation
-1[extracting marking features]
-end
-1 --> 2[estimating geometrical model]
-2 --> 3[tracking parameter...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/Lane-detection-and-lane-departure-warning/" >
-            
-                <span>[Review] Lane Detection and Lane Departure Warning Review</span>
-        </a>
-        <div class="abstract-content">
-            1.8. Lane Detection车道检测是上述步骤的综合应用，如将边界等特征提取与道路模型相结合。因此，基于不同的侧重点，存在两类方法，即基于特征和基于模型的方法。
-首先，特征方法通过提取道路图像的低级特征来定位车道。除通用的边界检测算子（如Sobel / Canny）外，部分文章提出了针对车道线的专业边界检测方法：
-
-
-
-另外一些方法对边界进一步具象，如[52]应用Hough变换提取车道轮廓的线段，并使用DBSCAN方法进行聚类分析。[53]使用最大稳定极值区域（MSER）与PPHough变换提取车道标记。[54][55]则结合车辆检测决定检测车道的区域。
-[28,29,63] ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/multi-lane-bndry/" >
-            
-                <span>[Review] Multiple Lane Boundary Detection Using a Combination of Low-Level Image Features</span>
-        </a>
-        <div class="abstract-content">
-            framework
-Fusion of edge features and high intensity feature
-Application of Kalman ﬁlter for information fusion and tracking
-Test on roads with different driving scenarios, including day, night, heavy trafﬁc, rain, confusing textures and shadows
-
-intro
-  Detection multiple lanes and achieving rel...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Lane Detection">Lane Detection</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Article Review">Article Review</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/12/Point-Cloud-Convolution/" title= "[Review] Convolution for Point Cloud">
+                    <div class="prevTitle">[Review] Convolution for Point Cloud</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -610,6 +560,24 @@ intro
 
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Abstract"><span class="toc-number">1.</span> <span class="toc-text">Abstract:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#密集数据分割"><span class="toc-number">2.</span> <span class="toc-text">密集数据分割</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#稀疏数据分割"><span class="toc-number">3.</span> <span class="toc-text">稀疏数据分割</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实验与结论"><span class="toc-number">4.</span> <span class="toc-text">实验与结论</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -847,6 +815,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
