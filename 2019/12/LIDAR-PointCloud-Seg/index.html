@@ -424,9 +424,9 @@ height:50vh;
 <h3 id="稀疏数据分割"><a href="#稀疏数据分割" class="headerlink" title="稀疏数据分割"></a>稀疏数据分割</h3><p>存在两种互补的稀疏分割方法：高斯过程增量采样一致性（GP-INSAC，Gaussian Process Incremental Sample Consensus）和网格分割（Mesh based Segmentation）。</p>
 <ol>
 <li><p>GP_INSAC：迭代连续概率地面估计方法，转换为基于模型的离群值筛除形式。增量采样一致性致力于解决模型复杂度增加带来的计算性能问题。通过迭代地外插和内插，GP-INSAC可以逐渐发现模型内点，并排除干扰模型的离群点，直到没有新的内点可以被找到。</p>
-<p><img src="../images/GP-INSAC.png" alt="GP-INSAC Algorithm"></p>
+<p><img src="/images/GP-INSAC.png" alt="GP-INSAC Algorithm"></p>
 <p>完整处理算法：</p>
-<p><img src="../images/GP-INSAC-ALL.png" alt="GP-INSAC-ALL"></p>
+<p><img src="/images/GP-INSAC-ALL.png" alt="GP-INSAC-ALL"></p>
 <p>Compress和Decimate即在固定尺寸的voxel grid中进行降采样。然后，种子点的选取基于高度和半径。</p>
 </li>
 <li><p>Mesh Based Segmentation：1）构建地形网格，2）基于梯度场提取地面点，3）聚类非地面物体</p>
@@ -442,7 +442,7 @@ height:50vh;
             <p>Author：<a href="http://guigua1.github.io">Henry Yang</a>
             <p>原文链接：<a href="http://guigua1.github.io/2019/12/LIDAR-PointCloud-Seg/">http://guigua1.github.io/2019/12/LIDAR-PointCloud-Seg/</a>
             <p>发表日期：<a href="http://guigua1.github.io/2019/12/LIDAR-PointCloud-Seg/">December 23rd 2019, 12:00:00 am</a>
-            <p>更新日期：<a href="http://guigua1.github.io/2019/12/LIDAR-PointCloud-Seg/">January 9th 2020, 7:58:41 pm</a>
+            <p>更新日期：<a href="http://guigua1.github.io/2019/12/LIDAR-PointCloud-Seg/">January 10th 2020, 5:36:57 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     

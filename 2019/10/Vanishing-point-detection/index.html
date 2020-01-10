@@ -407,7 +407,7 @@ height:50vh;
     <article class="article-entry">
         <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>车道检测的应用环境多为开阔的室外场地，无论是在结构化环境（铺装道路）或非结构化环境（非铺装道路，off-road）中，此时的道路远端往往也位于图像的视觉消失点，因而可以将消失点作为车道检测的强有力证据。与此同时，想要得到精确地估计视觉消失点本身也具有一定难点。例如以边缘进行估计时，与消失点无关的物体边缘或环境（如光线强弱、噪声等）对边缘细节的破坏，可能给估计过程带来干扰，因此需要设计或选择具有一定辨别力及不变性的边缘特征表示方法。除此之外，各个特征对视觉消失点的贡献对于其估计的精度和效率都具有重要影响。一些文献针对这些问题展开了相关研究，下文基于几种经典的视觉消失点检测方法<sup><a href="#fn_1" id="reffn_1">1</a></sup><sup><a href="#fn_2" id="reffn_2">2</a></sup><sup><a href="#fn_3" id="reffn_3">3</a></sup><sup><a href="#fn_4" id="reffn_4">4</a></sup>进行介绍。</p>
 <h2 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h2><p>在基本的成像模型下，3-D世界中的平行线，如道路、建筑物边界等，透视投影在2-D图像平面中的线条将汇聚到特定位置，这些位置即称为视觉消失点。常见图像中可以观察出一个至三个消失点，而具体从车辆的前视摄像头来看，直线道路的消失点往往汇聚于视线前方，且与地平线相交。需要注意的是，曲线道路的消失点往往存在偏移。通过Moghandam P. 等人的论文<sup><a href="#fn_4" id="reffn_4">4</a></sup>所示图片可以直观地理解视觉消失点<code>vp (Vanishing-Point)</code>的位置。</p>
-<p><img src="/images/lane-detect/vanishing-point-draft.png" alt="消失点定义"></p>
+<p><img src="/images/vanishing-point-draft.png" alt="消失点定义"></p>
 <p>结合上图，大多数方法将消失点表示为2-D图像中部分直线的交点，于是相应的检测过程可大致分为三个步骤：</p>
 <ol>
 <li>检测图像中的显著边界，如道路或车道线等</li>
@@ -439,7 +439,7 @@ height:50vh;
             <p>Author：<a href="http://guigua1.github.io">Henry Yang</a>
             <p>原文链接：<a href="http://guigua1.github.io/2019/10/Vanishing-point-detection/">http://guigua1.github.io/2019/10/Vanishing-point-detection/</a>
             <p>发表日期：<a href="http://guigua1.github.io/2019/10/Vanishing-point-detection/">October 4th 2019, 12:00:00 am</a>
-            <p>更新日期：<a href="http://guigua1.github.io/2019/10/Vanishing-point-detection/">January 9th 2020, 8:03:06 pm</a>
+            <p>更新日期：<a href="http://guigua1.github.io/2019/10/Vanishing-point-detection/">January 10th 2020, 5:36:47 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
